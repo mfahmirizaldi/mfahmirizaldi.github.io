@@ -1,0 +1,177 @@
+.start {
+	width: 150px;
+	height: 50px;
+	font-size: 20px;
+
+}
+
+.start:hover {
+	width: 150px;
+	height: 50px;
+	font-size: 20px;
+	color: white;
+	background-color: black;
+
+}
+
+.social-part .fa {
+	padding-right: 30px;
+
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+#main-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	margin: 0 auto;
+	padding: 10px;
+
+}
+
+#crossword-container>div {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	grid-template-rows: 20% 80%;
+	max-height: 50px;
+	max-width: 62px;
+}
+
+@media screen and (min-width: 800px) {
+	#main-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		max-width: 920px;
+		margin: 0 auto;
+		margin-top: 50px;
+
+	}
+
+	#crossword-container>div {
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		grid-template-rows: 20% 80%;
+		max-height: 50px;
+		max-width: 50px;
+		border: 1px solid black;
+	}
+}
+
+#crossword-container {
+	display: grid;
+	grid-template-columns: repeat(12, minmax(50px, auto));
+	grid-template-rows: repeat(12, minmax(50px, auto));
+
+}
+
+#solution-container {
+	background: lightgray;
+	display: grid;
+	grid-template-rows: 50% 50%;
+	padding-top: 50px;
+	margin-left: -48px;
+}
+
+#crossword-container div {
+	background: white;
+}
+
+#crossword-container input {
+	border: 1px solid black;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 30px;
+}
+
+#crossword-container input:focus {
+	background: transparent;
+}
+
+#crossword-container>div div:nth-child(1) {
+	background: inherit;
+	grid-column: 1 / 4;
+	font-size: 8px;
+	font-weight: bolder;
+	padding-left: 5px;
+
+}
+
+#crossword-container>div div:nth-child(2) {
+	background: inherit;
+	grid-column: 4 / 8;
+
+}
+
+#crossword-container>div div:nth-child(3) {
+	background: inherit;
+	grid-column: 1 / 8;
+	grid-row-start: 2;
+	max-width: 50px;
+}
+
+#crossword-container>div>div input {
+	background: inherit;
+	cursor: pointer;
+	text-transform: uppercase;
+	max-width: 50px;
+	height: 40px;
+	border: none;
+	text-align: center;
+	color: black;
+}
+
+.error {
+	background: red !important;
+}
+
+
+#across-words-container {
+	grid-row-start: 1;
+	text-align: center;
+}
+
+#across-words-container-label,
+#down-words-container-label {
+	text-align: center;
+}
+
+#across-words-container-names,
+#down-words-container-names {
+	text-align: left;
+	margin-left: -10px;
+}
+
+#down-words-container {
+	grid-row-start: 2;
+	text-align: center;
+}
+
+.correct {
+	text-decoration: line-through;
+
+
+}
+
+ul li {
+	list-style-type: none;
+	font-family: Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+li span {
+	padding-left: 6px;
+}
+
+input:disabled {
+	color: #fff;
+}
+
+input:focus {
+	color: #000;
+}
